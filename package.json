@@ -1,0 +1,20 @@
+{
+  "name": "travel-company",
+  "version": "1.0.0",
+  "description": "Travel Company landing page",
+  "main": "index.html",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server --wait=1000",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "author": "Milos Andrejic",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "npm-run-all": "^4.1.5"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

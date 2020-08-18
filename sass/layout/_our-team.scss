@@ -1,0 +1,121 @@
+.team {
+  background-color: $color-grey-light-1;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-member {
+  flex: 0 0 33%;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 10rem 10rem;
+
+  &__img-container {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+
+  &:nth-child(1) > &__img-container > &__img {
+    background: url('../../img/team-member-1.jpg');
+    background-size: cover;
+  }
+
+
+  &:nth-child(2) > &__img-container &__img {
+    background: url('../../img/team-member-2.jpg');
+    background-size: cover;
+  }
+
+  &:nth-child(3) > &__img-container &__img {
+    background: url('../../img/team-member-3.jpg');
+    background-size: cover;
+  }
+
+  &:nth-child(4) > &__img-container &__img {
+    background: url('../../img/team-member-4.jpg');
+    background-size: cover;
+  }
+
+  &:nth-child(5) > &__img-container &__img {
+    background: url('../../img/team-member-5.jpg');
+    background-size: cover;
+  }
+
+  &:nth-child(6) > &__img-container &__img {
+    background: url('../../img/team-member-6.jpg');
+    background-size: cover;
+  }
+
+
+  &__img {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+  }
+
+  &__text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2rem;
+    width: 60%;
+  }
+
+  &__name {
+    color: $color-pink;
+    font-size: 1.6rem;
+  }
+
+  &__position {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $color-grey-dark-1;
+  }
+
+  &__paragraph {
+    color: $color-grey-dark-1;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  &__social {
+
+    &-container {
+      margin: 1rem 0;
+      width: 90%;
+      border-bottom: 1px solid $color-grey-dark-1;
+      padding: 1rem 0;
+    }
+
+    &-list {
+      list-style: none;
+      display: flex;
+      flex: 0 0 80%;
+      margin-right: auto;
+    }
+
+    &-item {
+      margin: 0 .5rem;
+    }
+
+    &-logo{
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      transition: transform .3s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+    }
+  }
+}

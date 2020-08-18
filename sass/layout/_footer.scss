@@ -1,0 +1,90 @@
+.footer {
+  background-color: $color-primary;
+  padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+
+  .container-top {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $color-grey-dark-3;
+    padding: 4rem 2rem;
+
+    & > * {
+      margin: 2rem 4rem;
+      padding: 2rem 2rem;
+      color: $color-grey-dark-1;
+    }
+  }
+
+  .container-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    font-size: 1.6rem;
+  }
+
+  &__heading {
+    color: $color-primary-light;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  &__social {
+    flex: 0 0 30%;
+
+    &-tweet {
+      margin-bottom: 5rem;
+    }
+
+    &-text {
+      font-size: 1.3rem;
+      font-style: italic;
+    }
+  }
+
+  &__blog {
+    flex: 0 0 30%;
+    background-color: $color-primary-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-heading {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    &-paragraph {
+      font-size: 1.3rem;
+    }
+
+    &-author-img {
+      width: 9rem;
+      height: 7rem;
+      position: relative;
+      top: 5.4rem;
+      clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+      background: url('../../img/team-member-1.jpg');
+      background-size: cover;
+    }
+  }
+
+  &__contact {
+    flex: 0 0 30%;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-container {
+      flex: 0 0 40%;
+    }
+
+    &-content {
+      flex: 0 0 40%;
+      font-size: 1.4rem;
+    }
+  }
+}

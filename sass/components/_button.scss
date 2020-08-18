@@ -1,0 +1,51 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 1.3rem 5rem;
+    border-radius: 2.5rem;
+    font-size: 1.7rem;
+    text-decoration: none;
+    font-weight: 400;
+    border: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--animated-shaddow {
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+
+    &:active {
+      box-shadow: 0 1rem 2rem $color-black;
+      transform: translateY(0);
+    }
+
+    &:hover {
+      box-shadow: 0 1rem 4rem $color-black;
+      transform: translateY(-2px);
+    }
+
+  }
+
+  &--green {
+    background-color: $color-secondary;
+    color: $color-white;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-secondary;
+  }
+
+  &--submit{
+    &:hover {
+      background-color: $color-secondary-dark;
+      transition: all .5s;
+    }
+  }
+
+}

@@ -1,0 +1,24 @@
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+@import './base/base';
+@import './base/reset';
+@import './base/typography';
+@import './base/animations';
+@import './base/utilities';
+
+@import './layout/header';
+@import './layout/navigation';
+@import './layout/news';
+@import './layout/our-team';
+@import './layout/footer';
+
+@import './components/button';
+@import './components/bg_video';
+@import './components/arrow-down';
+@import './components/tour-card';
+@import './components/story-card';
+@import './components/form';
+@import './components/social-icons';
+
+@import './pages/home';

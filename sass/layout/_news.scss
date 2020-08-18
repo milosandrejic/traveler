@@ -1,0 +1,158 @@
+.news {
+  display: flex;
+  margin-bottom: 10rem;
+  height: 55rem;
+
+  &__primary-container {
+    flex: 0 0 60%;
+    padding: 4rem 2rem;
+    border-right: 1px solid $color-grey-light-2;
+  }
+
+  &__secondary-container {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    overflow-y: scroll;
+    flex: 1;
+    height: 100%;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $color-grey-light-2;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $color-grey-dark-3;
+
+    &:hover {
+      background: $color-grey-dark-2;
+    }
+  }
+
+  &__primary {
+    display: flex;
+    flex-direction: column;
+
+    &-heading {
+      text-align: center;
+      font-size: 2.7rem;
+      margin: 2rem;
+      font-weight: 600;
+    }
+
+    &-content {
+      font-size: 1.5rem;
+      padding: 2rem;
+    }
+
+    &-img {
+      height: 20rem;
+      float: left;
+      margin-right: 5rem;
+      margin-bottom: 2rem;
+    }
+
+    &-text {
+      text-align: justify;
+      letter-spacing: 1px;
+    }
+  }
+
+  &-type {
+    flex: 1;
+    font-size: 1.8rem;
+    color: $color-grey-dark-2;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+
+    &__list {
+      list-style: none;
+      display: flex;
+    }
+
+    &__item {
+      color: inherit;
+      border-radius: 7px;
+      transition: transform 0.3s;
+      color: inherit;
+      padding: 0.2rem 1.8rem;
+      border-radius: 7px;
+
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
+      &--active {
+        background-color: $color-grey-light-3;
+      }
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    font-size: 1.6rem;
+    color: $color-grey-dark-3;
+  }
+
+  &__item {
+    margin: 1rem 0;
+    text-align: center;
+    transform: all 2s;
+    padding: 1rem 0;
+    border-bottom: 1px solid $color-grey-light-3;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-primary-light;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.5s;
+    }
+
+    &:active,
+    &:hover {
+      color: $color-primary-dark;
+    }
+  }
+}
+
+.see-more {
+  &:link,
+  &:active,
+  &:visited {
+    display: inline-block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: $color-primary;
+    position: relative;
+    flex: 1;
+    align-self: flex-end;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    padding-bottom: 0.7rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: currentColor;
+    transition: width 0.8s cubic-bezier(1, 0, 0, 1);
+  }
+
+  &:hover::after {
+    width: 80%;
+  }
+}

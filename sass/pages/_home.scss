@@ -1,0 +1,66 @@
+.section-tours {
+  display: flex;
+  flex-direction: column;
+  background: rgba($color-primary-light, 0.1);
+  align-items: center;
+
+  .tours {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+.section-stories {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-news {
+  background-color: $color-grey-light-1;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-about {
+  display: flex;
+  flex-direction: column;
+
+  .about-us {
+
+    &__text-container {
+      margin: 3rem 20%;
+    }
+
+    &__text {
+      color: $color-grey-dark-1;
+      font-size: 2rem;
+      font-weight: 400;
+      text-align: justify;
+      line-height: 3rem;
+
+      &:not(:last-child){
+        margin: 2rem 0;
+      }
+
+      &:last-child {
+        margin-bottom: 10rem;;
+      }
+
+    }
+  }
+}
+
+.section-contact {
+  display: flex;
+  padding: 10rem 2rem;
+
+  .img-container{
+    flex: 0 0 50%;
+    background: url('../../img/logo-earth.jpg');
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+  }
+}

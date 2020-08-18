@@ -1,0 +1,32 @@
+.social {
+
+  &-container {
+    margin: 1rem 0;
+    width: 90%;
+    border-bottom: 1px solid $color-grey-dark-1;
+    padding: 1rem 0;
+  }
+
+  &-list {
+    list-style: none;
+    display: flex;
+    flex: 0 0 80%;
+    margin-right: auto;
+  }
+
+  &-item {
+    margin: 0 .5rem;
+  }
+
+  &-logo{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    transition: transform .3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+  }
+}

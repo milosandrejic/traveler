@@ -1,0 +1,45 @@
+.mobile-nav {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  width: 0;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s ease-in-out;
+  display: none;
+  overflow: hidden;
+
+  &__list {
+    list-style: none;
+    font-size: 4rem;
+  }
+
+
+  &__link {
+    &,
+    &:visited,
+    &:link {
+      color: $color-grey-light-3;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: block;
+      height: 100%;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    &:active{
+      background-color: $color-primary-dark;
+    }
+
+  }
+
+
+}

@@ -13,6 +13,22 @@
 <body>
 
   <header class="header">
+    <div class="hamburger">
+      <input type="checkbox" id="hamburger-toggle" class="hamburger-checkbox">
+      <label for="hamburger-toggle" class="hamburger-checkbox__label">
+        <span class="hamburger-content"></span>
+      </label>
+      <nav class="mobile-nav">
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__item"><a href="#tours" class="mobile-nav__link">Tours</a></li>
+          <li class="mobile-nav__item"><a href="#stories" class="mobile-nav__link">Stories</a></li>
+          <li class="mobile-nav__item"><a href="#news" class="mobile-nav__link">News</a></li>
+          <li class="mobile-nav__item"><a href="#about" class="mobile-nav__link">About Us</a></li>
+          <li class="mobile-nav__item"><a href="#contact" class="mobile-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
     <div class="navigation">
       <div class="logo-box">
         <a href="#" class="logo-box__link">
@@ -23,11 +39,11 @@
       </div>
       <nav class="navigation__nav">
         <ul class="navigation__list">
-          <li class="navigation__item"><a href="#" class="navigation__link">Tours</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">News</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">About us</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+          <li class="navigation__item"><a href="#tours" class="navigation__link">Tours</a></li>
+          <li class="navigation__item"><a href="#stories" class="navigation__link">Stories</a></li>
+          <li class="navigation__item"><a href="#news" class="navigation__link">News</a></li>
+          <li class="navigation__item"><a href="#about" class="navigation__link">About us</a></li>
+          <li class="navigation__item"><a href="#contact" class="navigation__link">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -49,9 +65,9 @@
   <main>
     <section class="section-tours">
 
-      <h2 class="heading__secondary heading__transparent mt-large mb-medium" id="tours">Our tours</h2>
+      <h2 class="heading__secondary heading__transparent mt-large mb-medium" >Our tours</h2>
 
-      <div class="tours">
+      <div class="tours" id="tours">
         <div class="tour-card">
           <div class="tour-card__up">
             <div class="tour-card__up__img tour-card__up__img--1">
@@ -68,7 +84,7 @@
               <li class="tour-card__item">Amazing flora and fauna</li>
               <li class="tour-card__item">Skyscraper trees</li>
             </ul>
-            <a href="#" class="btn--arow mt-medium mb-small">Details</a>
+            <a href="#popup" class="btn--arow mt-medium mb-small">Details</a>
           </div>
         </div>
         <div class="tour-card">
@@ -87,7 +103,7 @@
               <li class="tour-card__item">specific animals</li>
               <li class="tour-card__item">quad included</li>
             </ul>
-            <a href="#" class="btn--arow mt-medium mb-small">Details</a>
+            <a href="#popup" class="btn--arow mt-medium mb-small">Details</a>
           </div>
         </div>
         <div class="tour-card">
@@ -107,7 +123,7 @@
               <li class="tour-card__item">Top service</li>
               <li class="tour-card__item">5 star hotel</li>
             </ul>
-            <a href="#" class="btn--arow mt-medium mb-small">Details</a>
+            <a href="#popup" class="btn--arow mt-medium mb-small">Details</a>
           </div>
         </div>
         <div class="tour-card">
@@ -126,7 +142,7 @@
               <li class="tour-card__item">meet local people</li>
               <li class="tour-card__item">dinner in nature</li>
             </ul>
-            <a href="#" class="btn--arow mt-medium mb-small">Details</a>
+            <a href="#popup" class="btn--arow mt-medium mb-small">Details</a>
           </div>
         </div>
         <div class="tour-card">
@@ -145,7 +161,7 @@
               <li class="tour-card__item">local fishing tehniques</li>
               <li class="tour-card__item">Spearfishing</li>
             </ul>
-            <a href="#" class="btn--arow mt-medium mb-small">Details</a>
+            <a href="#popup" class="btn--arow mt-medium mb-small">Details</a>
           </div>
         </div>
         <div class="tour-card">
@@ -164,14 +180,14 @@
               <li class="tour-card__item">most popular places</li>
               <li class="tour-card__item">metro ticket</li>
             </ul>
-            <a href="#" class="btn--arow mt-medium mb-small">Details</a>
+            <a href="#popup" class="btn--arow mt-medium mb-small">Details</a>
           </div>
         </div>
       </div>
 
     </section>
 
-    <section class="section-stories">
+    <section class="section-stories" id="stories">
 
       <h2 class="heading__secondary mt-large mb-medium">Stories</h2>
 
@@ -241,7 +257,7 @@
         </div>
       </div>
     </section>
-    <section class="section-news">
+    <section class="section-news" id="news">
       <h2 class="heading__secondary mt-large mb-large">Travel News</h2>
       <div class="news-type">
         <ul class="news-type__list">
@@ -334,7 +350,7 @@
         </div>
       </div>
     </section>
-    <section class="section-about">
+    <section class="section-about" id="about">
       <h2 class="heading__secondary mt-large mb-large">About us</h2>
       <div class="about-us__text-container">
         <p class="about-us__text">Since 1975, ‘Organization Name’ has been focused on bringing our customers the best in
@@ -625,7 +641,7 @@
         </div>
       </div>
     </section>
-    <section class="section-contact">
+    <section class="section-contact" id="contact">
       <div class="form-container">
         <form class="form">
           <div class="form__title heading__tertiary heading__transparent">Drop Us A Line</div>
@@ -670,7 +686,8 @@
       <div class="footer__social">
         <div class="footer__social-tweet">
           <div class="footer__heading">Latest Tweet</div>
-          <div class="footer__social-text">More and more countries are opening borders from tourist after Covid 19. Here is the
+          <div class="footer__social-text">More and more countries are opening borders for tourist after Covid 19. Here
+            is the
             latest list of countries...</div>
         </div>
         <div class="social__logos">
@@ -712,7 +729,9 @@
       <div class="footer__blog">
         <h4 class="footer__heading">Blog</h4>
         <h4 class="footer__blog-heading">Tenerife, Travel With Us</h4>
-        <p class="footer__blog-paragraph">What does an explorer desire in a holiday destination? A perfect climate, pristine beaches, and a great nightlife sound appealing to you? Tenerife located in the famous Canary Islands of Spain...</p>
+        <p class="footer__blog-paragraph">What does an explorer desire in a holiday destination? A perfect climate,
+          pristine beaches, and a great nightlife sound appealing to you? Tenerife located in the famous Canary Islands
+          of Spain...</p>
         <div class="footer__blog-author-img"></div>
       </div>
       <div class="footer__contact">
@@ -738,6 +757,211 @@
       <p class="copyright">Made and design by &copy; Milos Andrejic. August 2020.</p>
     </div>
   </footer>
+  <div class="popup" id="popup">
+    <div class="popup__content">
+      <div class="popup__top">
+        <h4 class="popup__heading heading__tertiary heading__transparent">Best offers</h4>
+        <a href="#tours" class="popup__close"></a>
+      </div>
+      <div class="popup__bottom">
+        <div class="hotel-card">
+          <div class="hotel-card__top">
+            <div class="offer-type">Bestseller</div>
+          </div>
+          <div class="hotel-card__middle">
+            <h4 class="hotel__name">Iberostar Selection Paraiso Lindo Vacation Package</h4>
+            <p class="hotel__location">
+              <svg class="hotel__location-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-location"></use>
+              </svg>
+              Riviera Maya, Mexico
+            </p>
+            <span class="hotel__rating">
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-empty"></use>
+              </svg>
+            </span>
+            <div class="hotel__offer">
+              <span class="hotel__offer-duration">4 nights</span>
+              <span class="hote__offer-price">from 845$*</span>
+            </div>
+          </div>
+          <div class="hotel-card__bottom">
+            <ul class="hotel__benefits-list">
+              <li class="hotel__benefit-item">
+                <svg class="hotel__benefits-icon">
+                  <use xlink:href="./img/symbol-defs.svg#icon-bed"></use>
+                </svg>
+              </li>
+              <li class="hotel__benefit-item">
+                <svg class="hotel__benefits-icon">
+                  <use xlink:href="./img/symbol-defs.svg#icon-bus"></use>
+                </svg>
+              </li>
+              <li class="hotel__benefit-item">
+                <svg class="hotel__benefits-icon">
+                  <use xlink:href="./img/symbol-defs.svg#icon-plane"></use>
+                </svg>
+              </li>
+              <li class="hotel__benefit-item">
+                <svg class="hotel__benefits-icon">
+                  <use xlink:href="./img/symbol-defs.svg#icon-glass"></use>
+                </svg>
+              </li>
+            </ul>
+            <a href="#" class="hotel__book">
+              <svg class="hotel__book-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-bookmark"></use>
+              </svg>
+              Book
+            </a>
+          </div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-card__top">
+          </div>
+          <div class="hotel-card__middle">
+            <h4 class="hotel__name">Hilton Playa Del Carmen Vacation Package</h4>
+            <p class="hotel__location">
+              <svg class="hotel__location-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-location"></use>
+              </svg>
+              Riviera Maya, Mexico
+            </p>
+            <span class="hotel__rating">
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-empty"></use>
+              </svg>
+            </span>
+            <div class="hotel__offer">
+              <span class="hotel__offer-duration">4 nights</span>
+              <span class="hote__offer-price">from 935$*</span>
+            </div>
+          </div>
+          <div class="hotel-card__bottom">
+            <ul class="hotel__benefits-list">
+              <li class="hotel__benefit-item">
+                <svg class="hotel__benefits-icon">
+                  <use xlink:href="./img/symbol-defs.svg#icon-bed"></use>
+                </svg>
+              </li>
+              <li class="hotel__benefit-item">
+                <svg class="hotel__benefits-icon">
+                  <use xlink:href="./img/symbol-defs.svg#icon-bus"></use>
+                </svg>
+              </li>
+              <li class="hotel__benefit-item">
+                <svg class="hotel__benefits-icon">
+                  <use xlink:href="./img/symbol-defs.svg#icon-plane"></use>
+                </svg>
+              </li>
+              <li class="hotel__benefit-item">
+                <svg class="hotel__benefits-icon">
+                  <use xlink:href="./img/symbol-defs.svg#icon-glass"></use>
+                </svg>
+              </li>
+            </ul>
+            <a href="#" class="hotel__book">
+              <svg class="hotel__book-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-bookmark"></use>
+              </svg>
+              Book
+            </a>
+          </div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-card__top">
+            <div class="offer-type">All inclusive</div>
+          </div>
+          <div class="hotel-card__middle">
+            <h4 class="hotel__name">Hilton Zilara Cancun Vaction Package</h4>
+            <p class="hotel__location">
+              <svg class="hotel__location-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-location"></use>
+              </svg>
+              Cancun, Mexico
+            </p>
+            <span class="hotel__rating">
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+              <svg class="hotel__rating-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+            </span>
+            <div class="hotel__offer">
+              <span class="hotel__offer-duration">4 nights</span>
+              <span class="hote__offer-price">from 975$*</span>
+            </div>
+          </div>
+          <div class="hotel-card__bottom">
+            <ul class="hotel__benefits-list">
+              <li class="hotel__benefit-item">
+                <svg class="hotel__benefits-icon">
+                  <use xlink:href="./img/symbol-defs.svg#icon-bed"></use>
+                </svg>
+              </li>
+              <li class="hotel__benefit-item">
+                <svg class="hotel__benefits-icon">
+                  <use xlink:href="./img/symbol-defs.svg#icon-bus"></use>
+                </svg>
+              </li>
+              <li class="hotel__benefit-item">
+                <svg class="hotel__benefits-icon">
+                  <use xlink:href="./img/symbol-defs.svg#icon-plane"></use>
+                </svg>
+              </li>
+              <li class="hotel__benefit-item">
+                <svg class="hotel__benefits-icon">
+                  <use xlink:href="./img/symbol-defs.svg#icon-glass"></use>
+                </svg>
+              </li>
+            </ul>
+            <a href="#" class="hotel__book">
+              <svg class="hotel__book-icon">
+                <use xlink:href="./img/symbol-defs.svg#icon-bookmark"></use>
+              </svg>
+              Book
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
 </body>
 

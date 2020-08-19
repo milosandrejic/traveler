@@ -428,6 +428,33 @@ body {
       flex: 0 0 40%;
       font-size: 1.4rem; }
 
+.mobile-nav {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  width: 0;
+  height: 100vh;
+  background: linear-gradient(to right, #507192, #0e1419);
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s ease-in-out;
+  display: none;
+  overflow: hidden; }
+  .mobile-nav__list {
+    list-style: none;
+    font-size: 4rem; }
+  .mobile-nav__link, .mobile-nav__link:visited, .mobile-nav__link:link {
+    color: #aaa;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    height: 100%;
+    padding: 0 2rem;
+    text-align: center; }
+  .mobile-nav__link:active {
+    background-color: #0e1419; }
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   display: inline-block;
@@ -868,6 +895,200 @@ body {
   transition: transform .3s; }
   .social-logo:hover {
     transform: scale(1.2); }
+
+.hamburger {
+  display: flex;
+  display: none; }
+  .hamburger-checkbox {
+    display: none; }
+    .hamburger-checkbox__label {
+      position: absolute;
+      top: 4rem;
+      right: 4rem;
+      z-index: 20; }
+  .hamburger-checkbox:checked + .hamburger-checkbox__label > .hamburger-content {
+    background-color: transparent; }
+  .hamburger-checkbox:checked + .hamburger-checkbox__label > .hamburger-content::after {
+    transform: translateY(0) rotate(45deg); }
+  .hamburger-checkbox:checked + .hamburger-checkbox__label > .hamburger-content::before {
+    transform: translateY(0) rotate(-45deg); }
+  .hamburger-content {
+    display: block;
+    width: 4rem;
+    height: 4px;
+    background-color: white;
+    margin: 1rem 0;
+    position: relative; }
+    .hamburger-content::before, .hamburger-content::after {
+      content: " ";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      position: absolute;
+      transform: translateY(1rem);
+      transition: all .3s; }
+    .hamburger-content::before {
+      transform: translateY(1rem); }
+    .hamburger-content::after {
+      transform: translateY(-1rem); }
+
+.hamburger
+> .hamburger-checkbox:checked
++ .hamburger-checkbox__label
++ .mobile-nav {
+  width: 100vw; }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  transform: translate(50%, 50%) scale(0.2);
+  transition: all 0.3s; }
+  .popup:target {
+    transform: translate(0, 0) scale(1);
+    opacity: 1; }
+  .popup__content {
+    width: 90%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    position: relative; }
+  .popup__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+    position: relative; }
+  .popup__bottom {
+    display: flex;
+    justify-content: space-around; }
+  .popup__heading {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .popup__close {
+    font-size: 2rem;
+    font-weight: 600;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: all .5s; }
+    .popup__close:hover {
+      background-color: #2c3e50;
+      transform: rotate(180deg); }
+    .popup__close::before, .popup__close::after {
+      content: "";
+      width: 2rem;
+      height: 4px;
+      background-color: transparent;
+      position: absolute;
+      background-color: #2c2c2c;
+      transition: background-color .3s; }
+    .popup__close::before {
+      transform: rotate(45deg); }
+    .popup__close::after {
+      transform: rotate(135deg); }
+    .popup__close:hover::before, .popup__close:hover::after {
+      background-color: #fff; }
+
+.hotel {
+  display: flex;
+  flex-direction: column; }
+  .hotel-card:nth-child(1) > .hotel-card__top {
+    background: url("../../img/hotel-1.jpg"); }
+  .hotel-card:nth-child(2) > .hotel-card__top {
+    background: url("../../img/hotel-2.jpg"); }
+  .hotel-card:nth-child(3) > .hotel-card__top {
+    background: url("../../img/hotel-3.jpg"); }
+  .hotel-card {
+    border: 1px solid #ccc;
+    flex: 0 0 30%;
+    transform: translateY(0);
+    box-shadow: none;
+    transition: all 0.5s ease; }
+    .hotel-card:hover {
+      transform: translateY(-1rem);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8); }
+    .hotel-card__top {
+      width: 100%;
+      height: 25rem; }
+    .hotel-card__middle {
+      padding: 2rem 1rem; }
+    .hotel-card__bottom {
+      display: flex;
+      margin: 0 1rem;
+      border-top: 1px solid #ccc;
+      padding: 1.5rem 0;
+      justify-content: center; }
+  .hotel__name {
+    font-size: 2rem;
+    margin: 5px;
+    line-height: 2rem;
+    padding-right: 1rem; }
+  .hotel__location {
+    color: #8b8b8b;
+    font-size: 1.5rem; }
+    .hotel__location-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: currentColor; }
+  .hotel__rating-icon {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 3px; }
+  .hotel__offer {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    color: #2c2c2c;
+    font-weight: 600;
+    align-items: flex-end; }
+  .hotel__benefits-list {
+    display: flex;
+    list-style: none;
+    align-items: center; }
+  .hotel__benefits-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: #616161;
+    margin: 0 5px; }
+  .hotel__book {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #2c2c2c; }
+    .hotel__book-icon {
+      width: 1.8rem;
+      height: 1.8rem;
+      fill: #2c2c2c; }
+
+.offer-type {
+  position: absolute;
+  top: 1.5rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #686de0;
+  border-radius: 0 1rem 1rem 0;
+  padding: 0 1rem; }
 
 .section-tours {
   display: flex;

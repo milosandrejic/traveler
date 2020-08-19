@@ -12,6 +12,7 @@
 @import './layout/news';
 @import './layout/our-team';
 @import './layout/footer';
+@import './layout/mobile-nav';
 
 @import './components/button';
 @import './components/bg_video';
@@ -20,5 +21,8 @@
 @import './components/story-card';
 @import './components/form';
 @import './components/social-icons';
+@import './components/hamburger';
+@import './components/popup';
+@import './components/hotel-card';
 
 @import './pages/home';

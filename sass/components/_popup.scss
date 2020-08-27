@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   transform: translate(50%, 50%) scale(0.2);
-  transition: all 0.3s;
+  transition: all 0.5s;
   
 
   &:target {
@@ -20,7 +20,7 @@
 
   &__content {
     width: 90%;
-    height: 100%;
+    height: 95%;
     background: rgba($color-white, 0.9);
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem 0;
+    padding: 2rem 0;
     position: relative;
   }
 

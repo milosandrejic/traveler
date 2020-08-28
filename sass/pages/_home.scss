@@ -10,6 +10,11 @@
     padding: 3rem 0;
     width: 100%;
     justify-content: space-around;
+
+    @include responsive(phone) {
+      justify-content: center;
+    }
+
   }
 }
 
@@ -22,6 +27,13 @@
   background-color: $color-grey-light-1;
   display: flex;
   flex-direction: column;
+
+  & > h2:first-child {
+    @include responsive(phone) {
+      font-size: 4rem;
+    }
+  }
+
 }
 
 .section-about {
@@ -57,10 +69,21 @@
   display: flex;
   padding: 10rem 2rem;
 
+  @include responsive(tab-port){
+    justify-content: center;
+    padding: 5rem 2rem;
+  }
+
+
   .img-container{
     flex: 0 0 50%;
     background: url('../../img/logo-earth.jpg');
     background-size: 100% 80%;
     background-repeat: no-repeat;
+
+    @include responsive(tab-port) {
+      display: none;
+    }
+
   }
 }

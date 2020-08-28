@@ -2,27 +2,56 @@
   display: flex;
   flex-direction: column;
   margin: 5rem 4rem;
+  
+  @include responsive(tab-port) {
+    flex: 1;
+    padding: 5rem 10rem;
+    margin: 0;
+  }
+
+  @include responsive(phone) {
+    padding: 5rem;
+  }
+ 
 
   &__title {
     display: flex;
     align-items: flex-start;
     margin: 3rem 0;
+
+    @include responsive(tab-port) {
+      align-self: center;
+      margin-bottom: 8rem;
+      font-size: 3rem;
+    }
+
   }
 
   &__group {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    flex: 1;
     margin: 1rem 0;
 
     &:last-child {
       align-items: flex-end;
     }
 
+    &:nth-child(5){
+      flex-direction: row;
+    }
+
   }
 
   &__radio {
     justify-content: space-between;
+    display: flex;
+    
+    @include responsive(phone) {
+      flex-direction: column !important;
+      align-self: flex-end;
+    }
+
   }
 
   &__input {
@@ -116,4 +145,11 @@
 
 .form-container{
   flex: 0 0 45%;
+
+  @include responsive(tab-port) {
+    flex: 0 0 80%;
+    display: flex;
+    justify-content: center;
+  }
+
 }

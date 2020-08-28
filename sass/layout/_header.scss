@@ -8,13 +8,26 @@
     rgba($color-primary-light, 0.1) 50%
   );
   align-items: center;
+  width: 100%;
 
   &__content {
     flex: 0 0 80%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-top: 10rem;
+    align-items: center;
+
+    @include responsive(tab-land) {
+      padding: 0 2rem;
+      padding-top: 7rem ;
+    }
+
+    @include responsive(tab-port) {
+      margin-top: 19rem;
+      padding-top: 6rem;
+    }
+
+
   }
 }
 
@@ -23,6 +36,12 @@
   align-items: center;
   width: 5rem;
   height: 5rem;
+
+  @include responsive(tab-port) {
+    position: absolute;
+    top: 3rem;
+    left: 4rem;
+  }
 
   &__link {
     display: flex;
@@ -40,4 +59,8 @@
 .arrow-down-container {
   margin-top: auto;
   margin-bottom: 5rem;
+
+  @include responsive (tab-land) {
+    margin-bottom: 7rem;
+  }
 }

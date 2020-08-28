@@ -8,10 +8,20 @@ body {
 .heading {
   &__primary {
     color: $color-grey-light-2;
-    font-size: 6.5rem;
+    font-size: 5.5rem;
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 6px;
+    text-align: center;
+
+    @include responsive(phone) {
+      font-size: 5rem;
+    }
+
+    @include responsive(small-phone) {
+      font-size: 4rem;
+    }
+
   }
 
   &__secondary {
@@ -21,6 +31,15 @@ body {
     letter-spacing: 7px;
     color: $color-grey-dark-2;
     text-align: center;
+
+    @include responsive(tab-port) {
+      font-size: 4rem;
+    }
+
+    @include responsive(small-phone) {
+      font-size: 3rem;
+    }
+
   }
 
   &__tertiary {
@@ -29,7 +48,13 @@ body {
     font-weight: 400;
     letter-spacing: 3px;
     text-align: center;
+    align-self: center;
+    margin: auto;
     color: $color-grey-dark-1;
+
+    @include responsive(phone) {
+      font-size: 2.5rem;
+    }
   }
 
   &__transparent {

@@ -5,20 +5,31 @@
 .team-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .team-member {
   flex: 0 0 33%;
   display: flex;
   flex-wrap: nowrap;
-  margin: 10rem 10rem;
+  margin: 10rem 2rem;
+
+  @include responsive(tab-port) {
+    margin: 10rem 10rem;
+    flex: 0 0 60%;
+  }
+
 
   &__img-container {
     height: 20rem;
     width: 20rem;
     border-radius: 50%;
     overflow: hidden;
+
+    @include responsive(phone) {
+      display: none;
+    }
+
   }
 
 

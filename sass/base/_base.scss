@@ -1,12 +1,13 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include responsive(tab-land) {
+    font-size: 55%;
+  }
+
+  @include responsive(tab-port) {
+    font-size: 50%;
+  }
+
 }

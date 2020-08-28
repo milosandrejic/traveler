@@ -1,12 +1,23 @@
 .news {
   display: flex;
-  margin-bottom: 10rem;
-  height: 55rem;
+  margin-bottom: 20rem;
+
+  @include responsive(tab-port) {
+    margin-bottom: 10rem;
+  }
 
   &__primary-container {
     flex: 0 0 60%;
     padding: 4rem 2rem;
     border-right: 1px solid $color-grey-light-2;
+
+    @include responsive(tab-port) {
+      flex: 1;
+      border-right: none;
+      display: flex;
+      justify-content: center;
+    }
+
   }
 
   &__secondary-container {
@@ -15,7 +26,12 @@
     padding: 4rem 2rem;
     overflow-y: scroll;
     flex: 1;
-    height: 100%;
+    height: 50rem;
+
+    @include responsive (tab-port) {
+      display: none;
+    }
+
   }
 
   ::-webkit-scrollbar {
@@ -38,11 +54,29 @@
     display: flex;
     flex-direction: column;
 
+    @include responsive(tab-port) {
+      flex: 0 0 80%;
+    }
+
+    @include responsive (smal-phone) {
+      flex: 0 0 90%;
+    }
+
     &-heading {
       text-align: center;
       font-size: 2.7rem;
       margin: 2rem;
       font-weight: 600;
+
+      @include responsive(tab-land) {
+        font-size: 2rem;
+      }
+
+      @include responsive(tab-port) {
+        font-size: 2.7rem;
+      }
+
+
     }
 
     &-content {
@@ -55,6 +89,15 @@
       float: left;
       margin-right: 5rem;
       margin-bottom: 2rem;
+
+      @include responsive(tab-land) {
+        height: 15rem;
+      }
+
+      @include responsive(phone) {
+        display: none;
+      }
+
     }
 
     &-text {
@@ -70,6 +113,10 @@
     display: flex;
     justify-content: center;
     margin-bottom: 10rem;
+
+    @include responsive(tab-port) {
+      margin-bottom: 5rem;
+    }
 
     &__list {
       list-style: none;
@@ -104,7 +151,6 @@
   &__item {
     margin: 1rem 0;
     text-align: center;
-    transform: all 2s;
     padding: 1rem 0;
     border-bottom: 1px solid $color-grey-light-3;
   }

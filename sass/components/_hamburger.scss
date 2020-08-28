@@ -1,12 +1,15 @@
 .hamburger {
-  display: flex;
   display: none;
+
+  @include responsive(tab-port) {
+    display: flex;
+  }
 
   &-checkbox {
     display: none;
 
     &__label {
-      position: absolute;
+      position: fixed;
       top: 4rem;
       right: 4rem;
       z-index: 20;
@@ -60,5 +63,13 @@
   + .hamburger-checkbox__label
   + .mobile-nav {
   width: 100vw;
+
+  & > .mobile-nav__list {
+    opacity: 1;
+  }
+
 }
+
+
+
 

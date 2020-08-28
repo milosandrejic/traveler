@@ -4,16 +4,26 @@
   display: flex;
   flex-direction: column;
 
+
   .container-top {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid $color-grey-dark-3;
     padding: 4rem 2rem;
 
+    @include responsive(phone) {
+      flex-wrap: wrap;
+    }
+
     & > * {
       margin: 2rem 4rem;
       padding: 2rem 2rem;
       color: $color-grey-dark-1;
+
+      @include responsive(phone) {
+        flex: 0 0 70%;
+      }
+
     }
   }
 
@@ -51,6 +61,10 @@
     flex-direction: column;
     align-items: center;
 
+    @include responsive(tab-land) {
+      display: none;
+    }
+
     &-heading {
       margin-bottom: 1rem;
       font-size: 1.6rem;
@@ -77,6 +91,11 @@
     flex: 0 0 30%;
     display: flex;
     flex-wrap: wrap;
+
+    @include responsive(tab-land) {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
 
     &-container {
       flex: 0 0 40%;

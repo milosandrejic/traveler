@@ -1,5 +1,5 @@
 .mobile-nav {
-  position: absolute;
+  position: fixed;
   top: 0rem;
   right: 0rem;
   width: 0;
@@ -16,9 +16,16 @@
   display: none;
   overflow: hidden;
 
+  @include responsive(tab-port) {
+    display: flex;
+  }
+
+
   &__list {
     list-style: none;
     font-size: 4rem;
+    opacity: 0;
+    transition: opacity .3s ease;
   }
 
 
@@ -38,6 +45,7 @@
     &:active{
       background-color: $color-primary-dark;
     }
+
 
   }
 

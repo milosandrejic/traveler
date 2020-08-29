@@ -14,3 +14,13 @@
 .flex-row {
   flex-direction: row !important;
 }
+
+.color-blue {
+  color: $color-primary-light;
+  transition: color .5s;
+}
+
+.color-white {
+  color: $color-white;
+  transition: color .5s;
+}

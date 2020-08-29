@@ -21,6 +21,11 @@
     box-shadow: none;
     transition: all 0.5s ease;
 
+    @include responsive(tab-port) {
+      margin: 2rem 2rem;
+      flex: 0 0 80%;
+    }
+
     &:hover {
       transform: translateY(-1rem);
       box-shadow: 0 1rem 2rem rgba($color-black, 0.8);

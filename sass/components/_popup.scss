@@ -11,6 +11,8 @@
   justify-content: center;
   transform: translate(50%, 50%) scale(0.2);
   transition: all 0.5s;
+  z-index: 500;
+  
   
 
   &:target {
@@ -25,6 +27,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    overflow-y: scroll;
   }
 
   &__top {
@@ -39,6 +42,11 @@
   &__bottom {
     display: flex;
     justify-content: space-around;
+
+    @include responsive(tab-port) {
+      flex-direction: column;
+    }
+
   }
 
   &__heading {

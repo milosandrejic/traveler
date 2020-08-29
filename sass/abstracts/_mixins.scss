@@ -54,6 +54,12 @@ big-desktop 1200px -
     }
   }
 
+  @if($breakpoint == phone-land){
+    @media(min-width: 768px) and (max-height: 576px){
+      @content;
+    }
+  }
+
   @if($breakpoint == tab-port){
     @media(max-width: 768px) {
       @content;

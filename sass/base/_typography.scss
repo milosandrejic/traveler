@@ -22,6 +22,10 @@ body {
       font-size: 4rem;
     }
 
+    @include responsive(phone-land) {
+      font-size: 3.5rem;
+    }
+
   }
 
   &__secondary {

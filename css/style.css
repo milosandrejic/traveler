@@ -101,6 +101,18 @@ body {
 .animation--pulsate-color {
   animation: pulsateColor 2s infinite ease backwards; }
 
+.fadeInLeft {
+  animation: fadeInLeft 1s backwards; }
+
+.fadeInRight {
+  animation: fadeInRight 1s backwards; }
+
+.fadeInTop {
+  animation: fadeInTop 1s backwards; }
+
+.fadeAndZoom {
+  animation: fadeAndZoom .8s backwards; }
+
 @keyframes pulsate {
   0% {
     transform: scale(1); }
@@ -142,6 +154,41 @@ body {
     fill: #ccc;
     transform: scale(1); } }
 
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes fadeInTop {
+  0% {
+    transform: translateY(10rem);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes fadeAndZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  80% {
+    opacity: 1;
+    transform: scale(1.1); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
 .mb-small {
   margin-bottom: 2rem !important; }
 
@@ -173,6 +220,9 @@ body {
 .color-white {
   color: #fff;
   transition: color .5s; }
+
+.prepareForFade {
+  opacity: 0; }
 
 .header {
   display: flex;
